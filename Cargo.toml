@@ -4,9 +4,8 @@ version = "0.1.0"
 edition = "2021"
 authors = ["Lorenzo Frittoli https://github.com/lorenzo-frittoli/wifi-cli"]
 description = "Simple CLI tool for connecting to wifi networks"
-
 license = "MIT"
-license-file = "LICENSE"
+repository = "https://github.com/lorenzo-frittoli/wifi-cli"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
