@@ -54,7 +54,7 @@ fn main() -> io::Result<()> {
         match state {
             0 => {
                 if let Some(Ok(evt)) = event_iter.next() {
-                    let response = match_evt(evt, &mut stdout, &wifi_list, &mut selector_pos)?;
+                    let response = match_evt(evt, &wifi_list, &mut selector_pos)?;
                     match response {
                         Response::Continue => wifi_list = refresh(&mut stdout, &selector_pos)?,
                         Response::Select => {
@@ -103,12 +103,7 @@ fn main() -> io::Result<()> {
     Ok(())
 }
 
-fn match_evt(
-    evt: Event,
-    stdout: &mut RawTerminal<Stdout>,
-    wifi_list: &str,
-    selector_pos: &mut u8,
-) -> io::Result<Response> {
+fn match_evt(evt: Event, wifi_list: &str, selector_pos: &mut u8) -> io::Result<Response> {
     return match evt {
         // Arrows
         Event::Key(Key::Up) => {
