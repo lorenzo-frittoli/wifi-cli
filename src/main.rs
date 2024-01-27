@@ -1,11 +1,10 @@
 extern crate termion;
 
-use std::io::{self, stdin, stdout, Cursor, Read, Stdin, Stdout, Write};
-use std::process::{Command, Output};
-use std::string::FromUtf8Error;
+use std::io::{self, stdin, stdout, Stdout, Write};
+use std::process::Command;
 use std::u8;
-use termion::event::{Event, Key, MouseEvent};
-use termion::input::{MouseTerminal, TermRead};
+use termion::event::{Event, Key};
+use termion::input::TermRead;
 use termion::raw::{IntoRawMode, RawTerminal};
 
 enum Response {
